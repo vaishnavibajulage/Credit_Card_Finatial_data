@@ -27,15 +27,16 @@ effectively.
 - Step 5 : In the report view, under the view tab, theme was selected.
 - Step 6 : Since the data contains various Quaters, thus in order to represent Quaters, a new visual was added using the treeMap  in the visualizations pane in report view. 
 
-- Step 8 : Visual filters (Slicers) were added for weekly Date fields named "weekly_start_Date".
-- Step 9 : one treeMap were added to the canvas Based on Gender,one representing Female & other representing Male
-![WhatsApp Image 2024-05-10 at 01 57 35](https://github.com/vaishnavibajulage/Credit_Card_Finatial_data/assets/83158414/1b0ea45e-30f7-4e93-a2e8-07dc7e6f8880)
+- Step 7 : Visual filters (Slicers) were added for weekly Date fields named "weekly_start_Date".
+- Step 8 : one treeMap were added to the canvas Based on Gender,one representing Female & other representing Male
+![sNAPSHORT 1](https://github.com/vaishnavibajulage/Credit_Card_Finatial_data/assets/83158414/54f3f4ad-019d-438c-b199-f4059b278509)
+
 
            Using visual level filter from the filters pane, basic filtering was used & null values were unselected for consideration into average calculation.
            
-- Step 10 : In the report view, under the insert tab, One text boxe added to the canvas, in that  CREDIT  CARD  CUSTOMER REPORT  was mentioned .
+- Step 9 : In the report view, under the insert tab, One text boxe added to the canvas, in that  CREDIT  CARD  CUSTOMER REPORT  was mentioned .
  
-- Step 11 : Calculated column was created in which, customers were grouped into various age groups.
+- Step 10 : Calculated column was created in which, customers were grouped into various age groups.
 
 for creating new column following DAX expression was written;
        
@@ -48,11 +49,11 @@ Age Group =  SWITCH(TRUE(),
 "unknnown"
 )   
 
-![WhatsApp Image 2024-05-10 at 09 34 49](https://github.com/FusionIIIT/Fusion/assets/83158414/b1686346-e606-41d1-b8be-724a1e7103ef)
+![SNAPSHORT 2](https://github.com/vaishnavibajulage/Credit_Card_Finatial_data/assets/83158414/d33869a3-1a5a-4665-b050-59c6ac198e92)
 
 
         
-- Step 15 : New measure was created to find total income.
+- Step 11 : New measure was created to find total income.
 
 Following DAX expression was written for the same,
         
@@ -64,18 +65,29 @@ incomeGroup = SWITCH(TRUE(),
         
 
 
-![snapshort](https://github.com/FusionIIIT/Fusion/assets/83158414/7998bad7-97b9-431f-a2af-ccc3dc362ab6)
+![snapshort](https://github.com/vaishnavibajulage/Credit_Card_Finatial_data/assets/83158414/28aed0b7-4022-4f86-ab52-5c5616104aba)
 
-Step 11 : Calculated column was created in which, that is week2
+Step 12 : Calculated column was created , that is REVENUE
 
-for creating new column following DAX expression was written;
-![Snapshort](https://github.com/FusionIIIT/Fusion/assets/83158414/6961a9d5-3c28-463e-84de-864697a0c9df)
+Revenue = 'cc_bb credit_card'[Activation_30_Days]+'cc_bb credit_card'[Interest_Earned]+'cc_bb credit_card'[Total_Trans_Amt]
+
+![Snapshort](https://github.com/vaishnavibajulage/Credit_Card_Finatial_data/assets/83158414/07b8e8da-2124-4df1-9e55-da882f50a4d9)
+
+Step 13 : Calculated column was created , that is week2
+ 
+ for creating new column following DAX expression was written;
+
+ Week Num2 = WEEKNUM('cc_bb credit_card'[Week_Start_Date]) 
+
+![Snapshort](https://github.com/vaishnavibajulage/Credit_Card_Finatial_data/assets/83158414/7066e62f-dbb5-432f-9ac1-13964a297dfb)
 
 # Snapshot of Dashboard (Power BI Service)
-![Dashboard](https://github.com/FusionIIIT/Fusion/assets/83158414/77524d69-d729-4d12-bc2c-e802c2ec724e)
+![Dashboard](https://github.com/vaishnavibajulage/Credit_Card_Finatial_data/assets/83158414/f0a13611-d2da-4db9-a15b-5ce1de0aa3ed)
 
 
-A card visual was used to represent Total Revenue,Total Intrest,Income,css.
+
+
+A card visual was used to represent TOTAL REVENUE,Total INTREST,INCOME,CSS.
 
 ![WhatsApp Image 2024-05-10 at 10 14 14](https://github.com/FusionIIIT/Fusion/assets/83158414/06213ff7-13a1-4fb0-a1db-81967df026b0)
 
@@ -84,7 +96,7 @@ A card visual was used to represent Total Revenue,Total Intrest,Income,css.
  # Report Snapshot (Power BI DESKTOP)
 
  
-![Dashboard_upload](https://github.com/FusionIIIT/Fusion/assets/83158414/ec3b7d3f-91e2-48ae-8cc6-13b9030e0f74)
+![Dashboard_upload](https://github.com/vaishnavibajulage/Credit_Card_Finatial_data/assets/83158414/5f6017f2-de0e-4432-a7ee-290574dd84ac)
 
 
 # Insights
